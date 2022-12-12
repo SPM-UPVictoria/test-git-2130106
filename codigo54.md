@@ -45,7 +45,7 @@ eval $lastcmd
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/54.png)
 
 [reesar](README.md)

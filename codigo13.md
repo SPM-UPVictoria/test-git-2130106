@@ -57,7 +57,7 @@ echo "Right!! Guessed $number in $guesses guesses."
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/13.png)
 
 [reesar](README.md)

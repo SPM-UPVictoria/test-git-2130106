@@ -59,7 +59,7 @@ echo "Account $1 has been suspended."
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/41.png)
 
 [reesar](README.md)

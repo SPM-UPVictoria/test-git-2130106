@@ -26,7 +26,7 @@ df -k | awk -f $tempfile
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/38.png)
 
 [reesar](README.md)

@@ -41,7 +41,7 @@ ${ulon}This is ul${uloff} and this is not
 ${invon}This is inv${invoff} and this is not
 ${yellowf}${redb}Warning I ${yellowb}${redf}Warning II${reset}"
 ```
-### salidaa 
+### salida
 ![salida](Salidas/11.png)
 
 [reesar](README.md)

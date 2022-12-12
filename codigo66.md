@@ -1,3 +1,13 @@
+# codigo 66
+## como funciona
+convierte una pagina en correo electronico
+
+## notas
+necesita internet
+
+### [codigo 66](Recipes/66getDope.sh)
+
+```bash
 #!/bin/bash
 now="$(date +%y%m%d)"
 start="https://www.straightdope.com/ "
@@ -19,3 +29,8 @@ curl "$URL"
 ) | /usr/sbin/sendmail -t
 
 exit 0
+```
+### salidaa 
+![salida](Salidas/66.png)
+
+[reesar](README.md)

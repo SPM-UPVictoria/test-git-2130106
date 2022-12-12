@@ -33,7 +33,7 @@ SHELL='which sh'
 
 eval $job             
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/49.png)
 
 [reesar](README.md)

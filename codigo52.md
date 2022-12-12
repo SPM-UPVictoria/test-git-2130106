@@ -54,7 +54,7 @@ fi
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/52.png)
 
 [reesar](README.md)

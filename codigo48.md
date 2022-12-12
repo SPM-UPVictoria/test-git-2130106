@@ -124,7 +124,7 @@ echo "Done. Found $totalerrors errors in $entries crontab entries."
 exit 0
 
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/48.png)
 
 [reesar](README.md)

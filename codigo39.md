@@ -83,7 +83,7 @@ fi
 
 exec grep -i "$1" $locatedb
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/39.png)
 
 [reesar](README.md)

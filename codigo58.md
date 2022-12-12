@@ -34,7 +34,7 @@ condition=`xmllint --xpath \
 
 echo $state" ("$zip") : Current temp "$current"F and "$condition" outside." 
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/58.png)
 
 [reesar](README.md)

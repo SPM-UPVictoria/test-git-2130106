@@ -106,7 +106,7 @@ fi
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/16.png)
 
 [reesar](README.md)

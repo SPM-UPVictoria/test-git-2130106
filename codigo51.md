@@ -65,7 +65,7 @@ if [ "$noinc" = "0" -a "$failure" = "0" ] ; then
 fi
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/51.png)
 
 [reesar](README.md)

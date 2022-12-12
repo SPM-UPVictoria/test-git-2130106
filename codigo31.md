@@ -29,7 +29,7 @@ fi
 
 exec sftp -C $account@$host
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/31.png)
 
 [reesar](README.md)

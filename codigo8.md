@@ -16,7 +16,7 @@ echon(){
 echon $*
 ```
 
-### salidaa 
+### salida 
 ![salida](Salidas/8.png)
 
 [reesar](README.md)

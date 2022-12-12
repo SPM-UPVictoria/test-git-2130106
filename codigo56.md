@@ -20,7 +20,7 @@ curl -s -dump "$baseURL/$1.html" | \
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/56.png)
 
 [reesar](README.md)

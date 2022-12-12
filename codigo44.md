@@ -31,7 +31,7 @@ rm -rf * $(find . -name ".[a-zA-Z0-9]*" -print)
 cp -Rp ..template/* .
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/44.png)
 
 [reesar](README.md)

@@ -43,7 +43,7 @@ fi
 
 exit 0
 ```
-### salidaa 
+### salida 
 ![salida1](Salidas/22-1.png)
 ![salida2](Salidas/22-2.png)
 

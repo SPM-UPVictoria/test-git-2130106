@@ -32,7 +32,7 @@ locatedb="/tmp/locate.db"
 
 exec grep -i "$@" $locatedb
 ```
-### salidaa 
+### salida 
 ![salida](Salidas/19.png)
 
 [reesar](README.md)
