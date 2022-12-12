@@ -35,4 +35,4 @@ exec grep -i "$@" $locatedb
 ### salida 
 ![salida](Salidas/19.png)
 
-[reesar](README.md)
+[regresar](README.md)

@@ -47,4 +47,4 @@ exit 0
 ![salida1](Salidas/22-1.png)
 ![salida2](Salidas/22-2.png)
 
-[reesar](README.md)
+[regresar](README.md)

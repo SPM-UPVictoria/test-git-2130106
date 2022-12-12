@@ -37,4 +37,4 @@ echo $state" ("$zip") : Current temp "$current"F and "$condition" outside."
 ### salida 
 ![salida](Salidas/58.png)
 
-[reesar](README.md)
+[regresar](README.md)

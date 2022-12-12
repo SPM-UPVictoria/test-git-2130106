@@ -32,4 +32,4 @@ exec sftp -C $account@$host
 ### salida 
 ![salida](Salidas/31.png)
 
-[reesar](README.md)
+[regresar](README.md)

@@ -33,7 +33,7 @@ awk -f $awkscript < "$1"
 
 exit 0
 ```
-### salidaa 
+### salida
 ![salida](Salidas/68.png)
 
-[reesar](README.md)
+[regresar](README.md)

@@ -31,4 +31,4 @@ echo -e "\tSatoshis recv: "$recv
 ### salida 
 ![salida](Salidas/61.png)
 
-[reesar](README.md)
+[regresar](README.md)

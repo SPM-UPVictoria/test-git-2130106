@@ -63,4 +63,4 @@ echo "($homedir/$1) has been removed."
 exit 0
 ```
 
-[reesar](README.md)
+[regresar](README.md)

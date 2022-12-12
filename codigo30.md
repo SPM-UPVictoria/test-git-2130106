@@ -32,4 +32,4 @@ exec $realquota $flags "$@"
 ### salida 
 ![salida](Salidas/30.png)
 
-[reesar](README.md)
+[regresar](README.md)

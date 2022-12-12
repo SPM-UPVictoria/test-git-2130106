@@ -86,4 +86,4 @@ exec grep -i "$1" $locatedb
 ### salida 
 ![salida](Salidas/39.png)
 
-[reesar](README.md)
+[regresar](README.md)

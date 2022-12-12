@@ -52,7 +52,7 @@ $lynx -source "$url?a=$amount&from=$basecurrency&to=$targetcurrency" | \
 
 exit 0
 ```
-### salidaa 
+### salida
 ![salida](Salidas/60.png)
 
-[reesar](README.md)
+[regresar](README.md)

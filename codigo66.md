@@ -30,7 +30,7 @@ curl "$URL"
 
 exit 0
 ```
-### salidaa 
+### salida
 ![salida](Salidas/66.png)
 
-[reesar](README.md)
+[regresar](README.md)
