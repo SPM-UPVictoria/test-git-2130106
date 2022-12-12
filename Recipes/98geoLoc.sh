@@ -1,6 +1,4 @@
 #!/bin/bash
-# geoloc -- for images that have GPS information, convert it into a string
-#   that can be fed to Google Maps or Bing Maps.
 
 tempfile="/tmp/geoloc.$$"
 

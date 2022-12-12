@@ -23,13 +23,11 @@ validint()
   
   if [ ! -z $min ] ; then
     if [ "$number" -lt "$min" ] ; then
-      #echo "$number is too small: smallest acceptable value is $min" >&2
       return 1
     fi
   fi
   if [ ! -z $max ] ; then
     if [ "$number" -gt "$max" ] ; then
-      #echo "Your value is too big: largest acceptable value is $max" >&2
       return 1
     fi
   fi

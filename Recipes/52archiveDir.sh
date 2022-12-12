@@ -1,11 +1,10 @@
 #!/bin/bash
-# archivedir--Creates a compressed archive of the specified directory.
 
-maxarchivedir=10           # Size, in blocks, of 'big' directory
-compress=gzip              # Change to your favorite compress app.
-progname=$(basename $0)    # Nicer output format for error messages
+maxarchivedir=10           
+compress=gzip              
+progname=$(basename $0)    
 
-if [ $# -eq 0 ] ; then      # No args? That's a problem.
+if [ $# -eq 0 ] ; then     
   echo "Usage: $progname directory" >&2 ;exit 1
 fi
 
@@ -22,8 +21,6 @@ if [ ! -w . ] ; then
   echo "${progname}: cannot write archive file to current directory." >&2
   exit 1
 fi
-
-# Is the resultant archive going to be dangerously big? Let's check...
 
 dirsize="$(du -s $1 | awk '{print $1}')"
 

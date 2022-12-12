@@ -1,3 +1,13 @@
+# codigo 30
+## como funciona
+ejecuta el comando quota con modificadores nuevos
+
+## notas
+necesita instalar el paquete quota-tools
+
+### [codigo 30](Recipes/30flags.sh)
+
+```bash
 #!/bin/bash
 
 flags=""
@@ -18,3 +28,8 @@ do
 done
 
 exec $realquota $flags "$@"
+```
+### salidaa 
+![salida](Salidas/30.png)
+
+[reesar](README.md)

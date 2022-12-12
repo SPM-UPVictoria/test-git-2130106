@@ -1,15 +1,9 @@
 #!/bin/bash
-# syncdropbox -- Synchronize a set of files or a specified folder with
-# Dropbox. Accomplished by copying the folder into ~/Dropbox or the set of
-# files into the sync folder in Dropbox, then launching Dropbox.app as
-# needed 
 
 name="syncdropbox"
 dropbox="$HOME/Dropbox"
 sourcedir=""
-targetdir="sync"		# Target folder on Dropbox for individual files
-
-# Check starting arguments
+targetdir="sync"
 
 if [ $# -eq 0 ] ; then
   echo "Usage: $0 [-d source-folder] {file, file, file}" >&2 ; exit 1
@@ -19,8 +13,6 @@ if [ "$1" = "-d" ] ; then
   sourcedir="$2"
   shift; shift
 fi
-
-# Validity checks
 
 if [ ! -z "$sourcedir" -a $# -ne 0 ] ; then
   echo "$name: you can't specify both a directory and specific files." >&2 ; exit 1
@@ -32,17 +24,14 @@ if [ ! -z "$sourcedir" ] ; then
   fi
 fi
 
-###### MAIN BLOCK
-
 if [ ! -z "$sourcedir" ] ; then
  if [ -f "$dropbox/$sourcedir" -o -d "$dropbox/$sourcedir" ] ; then
     echo "$name: specified source directory $sourcedir already exists in $dropbox" >&2 ; exit 1
   fi
 
   echo "Copying contents of $sourcedir to $dropbox..."
-  cp -a "$sourcedir" $dropbox		# -a does a recursive copy, preserving owner info &c
+  cp -a "$sourcedir" $dropbox
 else
-  # No source directory, so we've been given individual files
   if [ ! -d "$dropbox/$targetdir" ] ; then
     mkdir "$dropbox/$targetdir"
     if [ $? -ne 0 ] ; then
@@ -50,10 +39,7 @@ else
     fi
   fi
     
-  # Ready! Let's copy the specified files
-
  cp -p -v $@ "$dropbox/$targetdir"
 fi
 
-# Now let's launch the Dropbox app to let it do the actual sync, if needed
 exec ./startDropbox89.sh "Dropbox.com"

@@ -1,15 +1,8 @@
 #!/bin/bash
-# open2 - -A smart wrapper for the cool Mac OS X 'open' command
-#   to make it even more useful. By default, ‘open’ launches the
-#   appropriate application for a specified file or directory
-#   based on the Aqua bindings, and it has a limited ability to 
-#   launch applications if they're in the /Applications dir.
 
-#   First, whatever argument we're given, try it directly.
 if ! xdg-open "$@" >/dev/null 2>&1 ; then
   if ! xdg-open -a "$@" >/dev/null 2>&1 ; then
 
-    # More than one arg?  Don't know how to deal with it: --quit.
     if [ $# -gt 1 ] ; then
       echo "open: Can't figure out how to open or launch $@More than one program not supported" >&2
       exit 1

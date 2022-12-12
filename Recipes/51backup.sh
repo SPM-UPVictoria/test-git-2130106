@@ -1,17 +1,11 @@
 #!/bin/bash
 
-# backup--Creates either a full or incremental backup of a set of
-#   defined directories on the system. By default, the output 
-#   file is compressed and saved in /tmp with a timestamped filename.
-#   Otherwise, specify an output device (another disk, a removable 
-#   storage device, or whatever else floats your boat).
-
-compress="bzip2"    # Change to your favorite compression app.
+compress="bzip2"   
 inclist="./backup.inclist.$(date +%d%m%y)"
  output="./backup.$(date +%d%m%y).bz2"
  tsfile="./time"
-  btype="incremental"  # Default to an incremental backup.
-  noinc=0                       # And here's an update of the timestamp.
+  btype="incremental"  
+  noinc=0                       
 
 trap "/bin/rm -f $inclist" EXIT
 
@@ -26,11 +20,9 @@ EOF
   exit 1
 }
 
-########## Main code section begins here ###########
-
 while getopts "o:ifn" arg; do
   case "$opt" in
-    o ) output="$OPTARG";       ;;   # Getopts automatically manages OPTARG.
+    o ) output="$OPTARG";       ;;   
     i ) btype="incremental";    ;;
     f ) btype="full";           ;;
     n ) noinc=1;                ;;
@@ -42,7 +34,7 @@ shift $(( $OPTIND - 1 ))
 
 echo "Doing $btype backup, saving output to $output"
 
-timestamp="$(date +'%m%d%I%M')"  # Grab month,day,hour,minute from 'date'.
+timestamp="$(date +'%m%d%I%M')"  
 
 if [ "$btype" = "incremental" ] ; then 
   if [ ! -f $tsfile ] ; then

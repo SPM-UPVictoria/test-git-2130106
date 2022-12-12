@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# showCGIenv--Displays the CGI runtime environment, as given to any 
-#   CGI script on this system.
-
 echo "Content-type: text/html"
 echo ""
-
-# Now the real information...
 
 echo "<html><body bgcolor=\"white\"><h2>CGI Runtime Environment</h2>"
 echo "<pre>"

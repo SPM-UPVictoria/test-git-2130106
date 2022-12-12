@@ -1,12 +1,11 @@
 #!/bin/bash
-# weather--Gets the weather for a specific region or ZIP code.
 
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <zipcode>"
   exit 1
 fi
 
-apikey="603ce552cd7a4495bce552cd7a84952c" # Not a real API key--you need your own.
+apikey="603ce552cd7a4495bce552cd7a84952c"
 
 weather=`curl -s \
     "https://api.wunderground.com/api/$apikey/conditions/q/$1.xml"`

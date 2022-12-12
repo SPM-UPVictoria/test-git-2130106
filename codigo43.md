@@ -1,8 +1,18 @@
+# codigo 43
+## como funciona
+ejecuta un script dentro de library.sh
+
+## notas
+necesita el codigo library
+
+### [codigo 34](Recipes/43validator.sh)
+
+```bash
 #!/bin/bash
 
 errors=0
 
-source library.sh0
+source library.sh # which contains Script #1, the in_path() function
 
 validate()
 {
@@ -24,6 +34,9 @@ validate()
   fi
 }
 
+# BEGIN MAIN SCRIPT
+# =================
+
 if [ ! -x ${SHELL:?"Cannot proceed without SHELL being defined."} ] ; then
   echo "** SHELL set to $SHELL, but I cannot find that executable."
   errors=$(( $errors + 1 ))
@@ -35,7 +48,9 @@ then
   errors=$(( $errors + 1 ))
 fi
 
-oldIFS=$IFS; IFS=":"
+# Our first interesting test: Are all the paths in PATH valid?
+
+oldIFS=$IFS; IFS=":"     # IFS is the field separator. We'll change to ':'
 
 for directory in $PATH
 do
@@ -45,11 +60,17 @@ do
   fi
 done
 
-IFS=$oldIFS         
+IFS=$oldIFS             # restore value for rest of script
+
+# The following variables should each be a fully qualified path, 
+#   but they may be either undefined or a progname. Add additional 
+#   variables as necessary for your site and user community.
 
 validate "EDITOR" $EDITOR
 validate "MAILER" $MAILER
 validate "PAGER"  $PAGER
+
+# And, finally, a different ending depending on whether errors > 0
 
 if [ $errors -gt 0 ] ; then
   echo "Errors encountered. Please notify sysadmin for help."
@@ -58,3 +79,6 @@ else
 fi
 
 exit 0
+```
+
+[reesar](README.md)

@@ -1,16 +1,11 @@
 #!/bin/bash
 
-# ftpget - -Given an ftp-style URL, unwraps it and tries to obtain the 
-#   file using anonymous ftp.
-
 anonpass="$LOGNAME@$(hostname)"
 
 if [ $# -ne 1 ] ; then
   echo "Usage: $0 ftp://..." >&2
   exit 1
 fi
-
-# Typical URL: ftp://ftp.ncftp.com/unixstuff/q2getty.tar.gz
 
 if [ "$(echo $1 | cut -c1-6)" != "ftp://" ] ; then
   echo "$0: Malformed url. I need it to start with ftp://" >&2; 

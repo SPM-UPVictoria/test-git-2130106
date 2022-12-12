@@ -1,9 +1,4 @@
 #!/bin/bash
-# ituneslist - -Lists your iTunes library in a succinct and attractive
-#   manner, suitable for sharing with others, or for 
-#   synchronizing 
-
-#   (with diff) iTunes libraries on dt computers and laptops.
 
 itunehome="$HOME/Music/iTunes"
 ituneconfig="$itunehome/iTunes Music Library.xml"

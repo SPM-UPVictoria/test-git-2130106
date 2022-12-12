@@ -1,16 +1,24 @@
+# codigo 48
+## como funciona
+revisa un documento .cron si tiene errores
+
+## notas
+necesita un documento .cron
+
+### [codigo 48](Recipes/48verifyCron.sh)
+
+```bash
 #!/bin/bash
 
 validNum()
 {
   num=$1   max=$2
 
-  
   if [ "$num" = "X" ] ; then
     return 0
   elif [ ! -z $(echo $num | sed 's/[[:digit:]]//g') ] ; then
     return 1
   elif [ $num -gt $max ] ; then
-    return 1
   else
     return 0
   fi
@@ -18,7 +26,6 @@ validNum()
 
 validDay()
 {
-
   case $(echo $1 | tr '[:upper:]' '[:lower:]') in
     sun*|mon*|tue*|wed*|thu*|fri*|sat*) return 0 ;;
     X) return 0 ;;        
@@ -28,7 +35,6 @@ validDay()
 
 validMon()
 {
- 
    case $(echo $1 | tr '[:upper:]' '[:lower:]') in 
      jan*|feb*|mar*|apr*|may|jun*|jul*|aug*) return 0           ;;
      sep*|oct*|nov*|dec*)                    return 0           ;;
@@ -39,13 +45,12 @@ validMon()
 
 fixvars()
 {
-  
   sourceline="$min $hour $dom $mon $dow $command"
-   min=$(echo "$min" | tr '*' 'X')      
-  hour=$(echo "$hour" | tr '*' 'X')     
-   dom=$(echo "$dom" | tr '*' 'X')      
-   mon=$(echo "$mon" | tr '*' 'X')      
-   dow=$(echo "$dow" | tr '*' 'X')      
+   min=$(echo "$min" | tr '*' 'X')     
+  hour=$(echo "$hour" | tr '*' 'X')    
+   dom=$(echo "$dom" | tr '*' 'X')     
+   mon=$(echo "$mon" | tr '*' 'X')     
+   dow=$(echo "$dow" | tr '*' 'X')     
 }
 
 if [ $# -ne 1 ] || [ ! -r $1 ] ; then
@@ -54,14 +59,13 @@ fi
 
 lines=0  entries=0  totalerrors=0
 
-
 while read min hour dom mon dow command
 do
   lines="$(( $lines + 1 ))" 
   errors=0
   
   if [ -z "$min" -o "${min%${min#?}}" = "#" ] ; then
-    continue 
+    continue   
   fi
 
 
@@ -75,7 +79,7 @@ do
       errors=1
     fi
   done
-  
+
   for hrslice in $(echo "$hour" | sed 's/[,-]/ /g') ; do
     if ! validNum $hrslice 24 ; then
       echo "Line ${lines}: Invalid hour value \"$hrslice\"" 
@@ -118,3 +122,9 @@ done < $1
 echo "Done. Found $totalerrors errors in $entries crontab entries."
 
 exit 0
+
+```
+### salidaa 
+![salida](Salidas/48.png)
+
+[reesar](README.md)

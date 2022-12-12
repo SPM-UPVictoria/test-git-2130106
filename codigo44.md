@@ -1,4 +1,15 @@
+# codigo 44
+## como funciona
+limpia detras de un usuario de paso
+
+## notas
+necesita un usuario de paso
+
+### [codigo 44](Recipes/44fixGuest.sh)
+
+```bash
 #!/bin/bash
+
 
 iam=$(id -un)
 myhome="$(grep "^${iam}:" /etc/passwd | cut -d: -f6)"
@@ -19,3 +30,8 @@ rm -rf * $(find . -name ".[a-zA-Z0-9]*" -print)
 
 cp -Rp ..template/* .
 exit 0
+```
+### salidaa 
+![salida](Salidas/44.png)
+
+[reesar](README.md)

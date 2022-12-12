@@ -1,6 +1,16 @@
+# codigo 49
+## como funciona
+revisa la carpeta crontab en busca de una actividad diaria, semana o mensual
+
+## notas
+se tiene que ejecutar como sudo
+
+### [codigo 49](Recipes/49doCron.sh)
+
+```bash
 #!/bin/bash
 
-rootcron="/etc/crontab"   
+rootcron="/etc/crontab"  
 
 if [ $# -ne 1 ] ; then
   echo "Usage: $0 [daily|weekly|monthly]" >&2
@@ -19,6 +29,11 @@ if [ -z "$job" ] ; then
   exit 1
 fi
 
-SHELL='which sh'          
+SHELL='which sh'       
 
-eval $job              
+eval $job             
+```
+### salidaa 
+![salida](Salidas/49.png)
+
+[reesar](README.md)

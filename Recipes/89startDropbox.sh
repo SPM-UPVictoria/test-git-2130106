@@ -1,12 +1,11 @@
 #!/bin/bash
-# startdropbox -- Make sure Dropbox is running on your Mac system.
 
 app="Dropbox.com"
 verbose=1
 
 running="$(ps aux | grep -i $app | grep -v grep)"
 
-if [ "$1" = "-s" ] ; then		# -s is for silent mode
+if [ "$1" = "-s" ] ; then	
   verbose=0
 fi
 

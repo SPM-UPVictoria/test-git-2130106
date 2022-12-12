@@ -1,6 +1,4 @@
 #!/bin/bash
-# frameit - script to make it easy to add a graphical frame around
-#   an image file, using ImageMagick
 
 usage()
 {
@@ -24,10 +22,6 @@ EOF
 exit 1
 }
 
-#### MAIN CODE BLOCK
-
-# Most of this is parsing starting arguments!
-
 while getopts "b:c:f:m:" opt; do
   case $opt in
    b ) border="$OPTARG";                ;;
@@ -37,13 +31,11 @@ while getopts "b:c:f:m:" opt; do
    ? ) usage;                           ;;
   esac
 done
-shift $(($OPTIND - 1))  # eat all the parsed arguments
+shift $(($OPTIND - 1)) 
 
-if [ $# -eq 0 ] ; then     # no images specified?
+if [ $# -eq 0 ] ; then 
   usage
 fi
-
-# did we specify a border and a frame?
 
 if [ ! -z "$bordercolor" -a ! -z "$mattecolor" ] ; then
   echo "$(basename $0): You can't specify a color and matte color simultaneously." >&2

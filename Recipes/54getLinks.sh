@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# getlinks--Given a URL, returns all of its relative and 
-#   absolute links. Has three options: -d to generate the primary 
-#   domains of every link, -i to list just those links that are 
-#   internal to the site (that is, other pages on the same site), and
-#   -x to produce external links only (the opposite of –i).
-
 if [ $# -eq 0 ] ; then
   echo "Usage: $0 [-d|-i|-x] url"  >&2
   echo "-d=domains only, -i=internal refs only, -x=external only" >&2

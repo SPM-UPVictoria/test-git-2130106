@@ -1,5 +1,4 @@
 #!/bin/bash
-# getbtcaddr--Given a bitcoin address, reports useful information.
 
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <address>"

@@ -1,13 +1,9 @@
 #!/bin/bash
-# unscramble - Picks a word, scrambles it, and asks the user to guess
-#    what the original word (or phrase) was.
 
 wordlib="./palabras.txt"
 
 scrambleword()
 {
-  # Pick a word randomly from the wordlib, and scramble it.
-  # Original word is $match and scrambled word is $scrambled
 
   match="$(./68randomQuote.sh $wordlib)"
 

@@ -1,8 +1,17 @@
+# codigo 41
+## como funciona
+cambia contraseña y suspende un usuario
+
+## notas
+se tiene que ejecutar como sudo
+
+### [codigo 41](Recipes/41suspendUser.sh)
+
+```bash
 #!/bin/bash
 
 homedir="/home"         
 secs=10                 
-
 if [ -z $1 ] ; then
   echo "Usage: $0 account" >&2 ; exit 1
 elif [ "$(id -un)" != "root" ] ; then
@@ -49,3 +58,8 @@ chmod 000 $homedir/$1
 echo "Account $1 has been suspended."
 
 exit 0
+```
+### salidaa 
+![salida](Salidas/41.png)
+
+[reesar](README.md)

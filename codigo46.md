@@ -1,3 +1,13 @@
+# codigo 46
+## como funciona
+cambia la fecha de la computadora
+
+## notas
+necesita 8echon para funionar
+
+### [codigo 46](Recipes/46setDate.sh)
+
+```bash
 #!/bin/bash
 
 . echon8.sh
@@ -11,7 +21,7 @@ askvalue()
   elif [ "$(( $(echo $answer | wc -c) - 1 ))" -lt $4 ] ; then
     echo "$0: $1 $answer is too short: please specify $4 digits"; exit 0
   fi
-  eval $1=$answer 
+  eval $1=$answer  
 }
 
 eval $(date "+nyear=%Y nmon=%m nday=%d nhr=%H nmin=%M")
@@ -28,3 +38,6 @@ echo "Setting date to $squished. You might need to enter your sudo password:"
 sudo date $squished
 
 exit 0
+```
+
+[reesar](README.md)

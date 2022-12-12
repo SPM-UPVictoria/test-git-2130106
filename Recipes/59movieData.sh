@@ -26,7 +26,7 @@ if [ $# -eq 1 -a -z "$nodigits" ] ; then
   exit 0
 fi
 
-fixedname="$(echo $@ | tr ' ' '+')"	# for the URL
+fixedname="$(echo $@ | tr ' ' '+')"	
 
 url="$imdburl$fixedname"
 

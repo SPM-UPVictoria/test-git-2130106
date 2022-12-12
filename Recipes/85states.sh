@@ -1,8 +1,6 @@
 #!/bin/bash
-# states - A state capital guessing game. Requires the state capitals
-#   data file at http://www.intuitive.com/wicked/examples/state.capitals.txt.
 
-db="./state.capitals.txt"     # Format is State[tab]City
+db="./state.capitals.txt"
 
 if [ ! -r "$db" ] ; then
   echo "$0: Can't open $db for reading." >&2
@@ -17,9 +15,6 @@ while [ "$guess" != "quit" ] ; do
   
   thiskey="$(./68randomQuote.sh $db)"
   
-  # $thiskey is the selected line. Now let’s grab state and city info,
-  # then also have "match" as the all-lowercase version of the city name
-
   state="$(echo $thiskey | cut -d\   -f1 | sed 's/-/ /g')"
    city="$(echo $thiskey | cut -d\   -f2 | sed 's/-/ /g')"
   match="$(echo $city | tr '[:upper:]' '[:lower:]')"
@@ -28,10 +23,6 @@ while [ "$guess" != "quit" ] ; do
 
   echo ""
   echo "What city is the capital of $state?"
-
-  # Main loop where all the action takes place. Script loops until
-  # city is correctly guessed, or the user types "next" to 
-  # skip this one, or "quit" to quit the game
 
   while [ "$guess" != "$match" -a "$guess" != "next" -a "$guess" != "quit" ]
   do
@@ -45,7 +36,7 @@ while [ "$guess" != "quit" ] ; do
       guess=$match
     elif [ "$guess" = "next" -o "$guess" = "quit" ] ; then
       echo ""
-      echo "$city is the capital of $state."  # what you SHOULD have known 
+      echo "$city is the capital of $state." 
     else
       echo "I'm afraid that's not correct."
     fi 

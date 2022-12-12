@@ -1,3 +1,13 @@
+# codigo 42
+## como funciona
+elimina al usuario dado
+
+## notas
+se ejecuta como sudo
+
+### [codigo 42](Recipes/42deleteUser.sh)
+
+```bash
 #!/bin/bash
 
 homedir="/home"
@@ -13,7 +23,7 @@ elif [ "$(whoami)" != "root" ] ; then
   echo "Error: you must be 'root' to run this command.">&2; exit 1
 fi
 
-suspenduser $1   
+suspenduser $1    
 
 uid="$(grep -E "^${1}:" $pwfile | cut -d: -f3)"
 
@@ -51,3 +61,6 @@ echo "Account $1 (uid $uid) has been deleted, and their home directory "
 echo "($homedir/$1) has been removed."
 
 exit 0
+```
+
+[reesar](README.md)

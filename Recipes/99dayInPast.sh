@@ -1,5 +1,4 @@
 #!/bin/bash
-# dayinpast - given a date, report what day of the week it was
 
 if [ $# -ne 3 ] ; then
   echo "Usage: $(basename $0) mon day year" >&2
@@ -7,8 +6,8 @@ if [ $# -ne 3 ] ; then
   exit 1
 fi
 
-date --version > /dev/null 2>&1 	# discard error, if any
-baddate="$?"				# just look at return code
+date --version > /dev/null 2>&1 	
+baddate="$?"			
 
 if [ ! $baddate ] ; then
   date -d $1/$2/$3 +"That was a %A."
