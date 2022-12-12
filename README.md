@@ -10,3 +10,6 @@
 4. [codigo 13](codigo13.md)
 5. [codigo 16](codigo16.md)
 6. [codigo 19](codigo19.md)
+7. [codigo 22](codigo22.md)
+8. [codigo 28](codigo28.md)
+9. [codigo 29](codigo29.md)
